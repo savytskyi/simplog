@@ -1,0 +1,60 @@
+#####       #####
+##### INFO  #####
+#####       #####
+Simplog is first python3 blog on tornado and bottle.
+It was created to be simple, so it has no tons of useless functions.
+It's just alpha, so installation is not so simple, and it has a lot of bugs,
+but it will be improved soon.
+
+
+#####              #####
+##### REQUIRMENTS  #####
+#####              #####
+Python3 python.org/
+Bottle - bottlepy.org/ (simplog has an old version of it in bundle, but it will be better to install newer version on your VPS by yourself.)
+Tornado for Python3 http://www.tornadoweb.org/ (it requires distribute package: http://pypi.python.org/pypi/distribute)
+
+#####               #####
+##### INSTALLATION  #####
+#####               #####
+if you're developer, you need to reed only first 5 strings for installation, and 2 for start an engine.
+1. install python 3 (python.org/)
+2. then install distribute (http://pypi.python.org/pypi/distribute)
+3. and finally, install tornado (http://www.tornadoweb.org/)
+4. disable old web-server for your new host, because you'll use tornado
+5. edit settings.py in simplog directory. You'll find a help there
+6. upload simplog package to server and run install.py from simplog's directory
+7. after installation, run engine.py with superuser
+
+if you don't know what it was, read this:
+1. Firstly, check python3 in your system. By default, you can just type python3 in your terminal. If everything is ok, you'll see a pythons interpreter.
+2. Secondly, we need tornado, which requires distribute package. Just download distribute package here: http://pypi.python.org/pypi/distribute. Upload it to your server, if you need. Then, go to distribute folder, and execute this command:
+cd /home/path_to/distribute/
+python3 setup.py install
+
+3a. after it, we can install tornado, it will be our web-server. Use easy_install if you can
+easy_install tornado
+
+3b. or download it here: and upload to your server. Now we need to repeat steps for distribute installation. Go to tornado folder and install it:
+$cd /home/path_to/tornado
+$python3 setup.py install
+
+4. Now we're ready. Remember, only 1 web server can listen to your domain, so if you have apache or nginx, you need to disable configuration for your domain. Tornado will do everything, so you don't need it. If have only 1 domain, you can just stop your apache with this command:
+sudo /etc/init.d/apache2 stop
+
+5. Simplog's package has a settings file called 'settings.py'. Don't forget to edit it. You'll find help there
+
+6. Okay, now you're ready to upload simplog package on your server. After it, come to your simplog directory, and you need to execute installation file:
+cd /home/username/path_to/simplog
+sudo python3 install.py
+
+7. Now you can open browser, and go to your site. You will see installation page. Just fill it, and press grey button in the bottom. If everything fine, you will see a message 'delete install.py install.tpl'. Now you need to stop server (press Ctrl+C in your SSH window), and you're ready to start simplog engine
+sudo python3 engine.py
+
+That's all :)
+
+
+#####
+Simplog uses tornado like default web-server, but you can use it with nginx and apache too.
+It uses SQLite3 like default database, but it's not a problem to use it with MySQL.
+And simplog will be with tinyeditor.js for first time (http://www.scriptiny.com/2010/02/javascript-wysiwyg-editor/)
