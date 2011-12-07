@@ -24,7 +24,7 @@ if you're developer, you need to reed only first 5 strings for installation, and
 4. disable old web-server for your new host, because you'll use tornado
 5. edit settings.py in simplog directory. You'll find a help there
 6. upload simplog package to server and run install.py from simplog's directory
-7. after installation, run engine.py with superuser
+7. after installation, run engine.py with superuser. It will be better if you will run it in screen mode.
 
 if you don't know what it was, read this:
 1. Firstly, check python3 in your system. By default, you can just type python3 in your terminal. If everything is ok, you'll see a pythons interpreter.
@@ -48,8 +48,12 @@ sudo /etc/init.d/apache2 stop
 cd /home/username/path_to/simplog
 sudo python3 install.py
 
-7. Now you can open browser, and go to your site. You will see installation page. Just fill it, and press grey button in the bottom. If everything fine, you will see a message 'delete install.py install.tpl'. Now you need to stop server (press Ctrl+C in your SSH window), and you're ready to start simplog engine
+7. Now you can open browser, and go to your site. You will see installation page. Just fill it, and press grey button in the bottom. If everything fine, you will see a message 'delete install.py install.tpl'. Now you need to stop server (press Ctrl+C in your SSH window), and you're ready to start simplog engine. But, it will be better if you will run it in screen mode. So, type:
+screen
+cd /home/simplog/directory
 sudo python3 engine.py
+
+##to open screen mode in a future again, just write screen -r
 
 That's all :)
 

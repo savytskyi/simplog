@@ -3,6 +3,9 @@
 #put it into /mainsite/ folder of simplog. It will be available from there, not from default host's public_html folder!
 #for example, you have index.html and error.php, which must be available from yourdomain.com/index.html or yourdomain.com
 #and yourdomain.com/error.php JUST PUT IT INTO /mainsite/ FOLDER!
+#if you use css/js scripts in these pages, path to them must be /static/mainsite/*
+#for example you have css folder in your /mainsite/ folder. To access it from html
+#you need to write path not like href="css/styles.css" but href="/static/mainsite/css/styles.css"
 
 
 #####
