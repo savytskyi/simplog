@@ -1,23 +1,19 @@
-#####       #####
-##### INFO  #####
-#####       #####
-Simplog is first python3 blog on tornado and bottle.
+INFO
+-----------
+
+Simplog is a python3 blog on tornado and bottle.
 It was created to be simple, so it has no tons of useless functions.
-It's just alpha, so installation is not so simple, and it has a lot of bugs,
-but it will be improved soon.
+It was just a test of a Bottle framework, so don't expect too much from it
 
+REQUIRMENTS
+-----------
 
-#####              #####
-##### REQUIRMENTS  #####
-#####              #####
 Python3 python.org/
 Bottle - bottlepy.org/ (simplog has an old version of it in bundle, but it will be better to install newer version on your VPS by yourself.)
 Tornado for Python3 http://www.tornadoweb.org/ (it requires distribute package: http://pypi.python.org/pypi/distribute)
 
-#####               #####
-##### INSTALLATION  #####
-#####               #####
-if you're developer, you need to reed only first 5 strings for installation, and 2 for start an engine.
+INSTALLATION
+-----------
 1. install python 3 (python.org/)
 2. then install distribute (http://pypi.python.org/pypi/distribute)
 3. and finally, install tornado (http://www.tornadoweb.org/)
@@ -26,7 +22,8 @@ if you're developer, you need to reed only first 5 strings for installation, and
 6. upload simplog package to server and run install.py from simplog's directory
 7. after installation, run engine.py with superuser. It will be better if you will run it in screen mode.
 
-if you don't know what it was, read this:
+STEP BY STEP
+-----------
 1. Firstly, check python3 in your system. By default, you can just type python3 in your terminal. If everything is ok, you'll see a pythons interpreter.
 2. Secondly, we need tornado, which requires distribute package. Just download distribute package here: http://pypi.python.org/pypi/distribute. Upload it to your server, if you need. Then, go to distribute folder, and execute this command:
 cd /home/path_to/distribute/
@@ -53,12 +50,10 @@ screen
 cd /home/simplog/directory
 sudo python3 engine.py
 
-##to open screen mode in a future again, just write screen -r
+to open screen mode in a future again, just write screen -r
 
 That's all :)
 
-
-#####
 Simplog uses tornado like default web-server, but you can use it with nginx and apache too.
 It uses SQLite3 like default database, but it's not a problem to use it with MySQL.
 And simplog will be with tinyeditor.js for first time (http://www.scriptiny.com/2010/02/javascript-wysiwyg-editor/)
